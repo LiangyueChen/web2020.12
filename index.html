@@ -1,0 +1,1205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #page1 #content .col-1 {
+            width: 592px;
+            margin-right: 49px;
+        }
+
+        #page1 #content .col-2 {
+            width: 330px;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        html, body {
+            height: 100%;
+        }
+
+        html {
+            min-width: 971px;
+        }
+
+        body {
+            background: #ffffff;
+            font-size: 100%;
+            line-height: 1.125em;
+            color: #6C6C6C;
+        }
+
+        img {
+            border: 0;
+            vertical-align: top;
+            text-align: left;
+        }
+
+        object {
+            vertical-align: top;
+            outline: none;
+        }
+
+        ul, ol {
+            list-style: none;
+        }
+
+        table, td {
+            border: none;
+            padding: 0;
+            border-collapse: collapse;
+            vertical-align: top;
+            text-align: left;
+        }
+
+        .fleft {
+            float: left;
+        }
+
+        .fright {
+            float: right;
+        }
+
+        .clear {
+            clear: both;
+        }
+
+        .col-1, .col-2, .col-3 {
+            float: left;
+        }
+
+        .alignright {
+            text-align: right;
+        }
+
+        .aligncenter {
+            text-align: center;
+        }
+
+        .alignleft {
+            text-align: center;
+        }
+
+        .wrapper {
+            width: 100%;
+            overflow: hidden;
+        }
+
+        #main, .container {
+            width: 971px;
+            margin: 0 auto;
+            font-size: 0.75em;
+        }
+
+        #time {
+            height: 0px;
+            font-size: 20px;
+        }
+
+        #header {
+            height: 179px;
+            overflow: hidden;
+        }
+
+        #footer {
+            padding: 45px 0 45px 0;
+            background: #FFFFFF;
+            border-top: 1px solid #d8d8d8;
+        }
+
+        input, select, textarea {
+            font-size: 1em;
+            vertical-align: middle;
+            font-weight: normal;
+        }
+
+        .img-indent {
+            margin: 0 20px 0 0;
+            float: left;
+        }
+
+        .img-box {
+            width: 100%;
+            overflow: hidden;
+            padding-bottom: 1px;
+        }
+
+        .img-box h4 {
+            padding-top: 18px;
+        }
+
+        .img-box img {
+            float: left;
+            margin: 11.5px 20px 20px 36px;
+            cursor: pointer;
+            transition: all 0.6s;
+        }
+
+        .img-box img:hover {
+            transform: scale(1.06);
+        }
+
+        p {
+            margin-bottom: 18px;
+        }
+
+        .p1 {
+            margin-bottom: 9px;
+        }
+
+        .p2 {
+            margin-bottom: 18px;
+        }
+
+        .p3 {
+            margin-bottom: 27px;
+        }
+
+        a {
+            color: #000;
+            outline: none;
+        }
+
+        a:hover {
+            text-decoration: none;
+        }
+
+        h1 {
+            font-size: 38px;
+            line-height: 1.2em;
+            font-weight: normal;
+            color: #313131;
+        }
+
+        h1 a {
+            text-decoration: none;
+            color: #313131;
+        }
+
+        h1 a:hover {
+            text-decoration: none;
+        }
+
+        h2 {
+            font-size: 30px;
+            line-height: 1em;
+            color: #313131;
+            font-weight: normal;
+        }
+
+        h3 {
+            font-size: 20px;
+            line-height: 1.2em;
+            color: #7a7f81;
+            font-weight: normal;
+            border-bottom: 1px solid #cbd1d3;
+            padding-bottom: 8px;
+            margin-bottom: 32px;
+            width: 100%;
+            overflow: hidden;
+        }
+
+        h3.alt {
+            padding-top: 4px;
+        }
+
+        h3 em {
+            float: right;
+            font-size: 21px;
+            line-height: 80px;
+            color: #cc0000;
+            padding: 5px 0 0 0;
+        }
+
+        h3 em img {
+            margin-left: 13px;
+        }
+
+        h4 {
+            font-size: 1em;
+            color: #313131;
+            margin-bottom: 12px;
+        }
+
+        h5 {
+            font-size: 1em;
+            font-weight: normal;
+            margin-bottom: 8px;
+        }
+
+        .txt1 {
+            color: #cc0000;
+        }
+
+        .link1 {
+            float: left;
+            background: url(images/border-left.png);
+            color: #fff;
+            text-decoration: none;
+            font-size: 10px;
+        }
+
+        .link1:hover {
+            text-decoration: underline;
+        }
+
+        .link1 b {
+            display: block;
+            background: url(images/border-right.png);
+            padding: 0 16px;
+            font-weight: normal;
+            line-height: 29px;
+        }
+
+        .box {
+            background: #FFFCEC;
+            width: 100%;
+        }
+
+        .box .border-top {
+            background: url(images/border-top.png) repeat-x left top;
+        }
+
+        .box .border-bot {
+            background: url(images/border-bot.png) repeat-x left bottom;
+        }
+
+        .box .border-left {
+            background: url(images/border-left.png) repeat-y left top;
+        }
+
+        .box .border-right {
+            background: url(images/border-right.png) repeat-y right top;
+        }
+
+        .box .inner {
+            padding: 25px 28px 40px 45px;
+        }
+
+        .box h3 {
+            margin-bottom: 9px;
+        }
+
+        #header .row-1 {
+            height: 136px;
+            overflow: hidden;
+        }
+
+        #header .logo {
+            float: left;
+            padding: 59px 0 0 27px;
+        }
+
+        #header .logo h1 {
+            background: url(images/logo.jpg) no-repeat 0 0;
+            padding: 2px 0 0 90px;
+        }
+
+        #search-form {
+            float: right;
+            padding: 87px 40px 0 0;
+        }
+
+        #search-form fieldset {
+            float: right;
+            background: url(images/search-bg.gif) no-repeat 0 0;
+            border: none;
+        }
+
+        #search-form input.text {
+            width: 212px;
+            border: none;
+            background: none;
+            padding: 6px 0 6px 16px;
+            color: #999;
+        }
+
+        #search-form input.submit {
+            width: 28px;
+            height: 28px;
+            border: none;
+            background: none;
+            cursor: pointer;
+        }
+
+        #header .nav li {
+            float: left;
+            padding-right: 0;
+        }
+
+        #header .nav li a {
+            float: left;
+            line-height: 43px;
+            font-size: 14px;
+            color: #000;
+            text-decoration: none;
+            padding: 0 45.4px 0 45.4px;
+        }
+
+        #header .nav li a:hover, #header .nav li a.current {
+            background: #9900FF;
+            color: #fff;
+        }
+
+        #header .nav li.first a {
+            background: #9900FF;
+            color: #fff;
+        }
+
+        #header .nav li.middle a {
+            background: #B088FF;
+        }
+
+        #header .nav li.middle a:hover, #header .nav li.middle a.current {
+            background: #9900FF;
+        }
+
+        #header .nav li.last a {
+            background: #B088FF;
+            padding: 0 38px 0 38px;
+        }
+
+        #header .nav li.last a:hover, #header .nav li.last a.current {
+            background: #9900FF;
+        }
+
+        .banner {
+            height: 441px;
+            background-color: #7744FF;
+        }
+
+        .banner-big {
+            position: relative;
+        }
+
+        #content .indent {
+            padding: 45px 0 60px 0;
+        }
+
+        #content .section {
+            padding-bottom: 60px !important;
+        }
+
+        #content .indent .indent {
+            padding: 0 0 0 28px;
+        }
+
+        .news li {
+            position: relative;
+            border-bottom: 1px dashed #c8c8c8;
+            padding-bottom: 25px;
+            margin-bottom: 25px;
+            overflow: hidden;
+            width: 100%;
+        }
+
+        .news li.last {
+            padding-bottom: 0;
+            margin-bottom: 0;
+            border: none;
+        }
+
+        .news li h2 {
+            padding: 10px 0 35px 100px;
+        }
+
+        .news li h2 a {
+            color: #313131;
+            text-decoration: none;
+        }
+
+        .news li h2 a:hover {
+            color: #6600CC;
+        }
+
+        .news li .img-box h4 {
+            padding-top: 20px;
+        }
+
+        .news li span.date {
+            position: absolute;
+            left: 0;
+            top: 0;
+            background: url(images/bay-max.jpg) no-repeat 0 0;
+            width: 81px;
+            height: 86px;
+            display: block;
+            text-align: center;
+        }
+
+        .issues dt, .news dt {
+            color: #6F00D2;
+            font-size: 17px;
+            margin-bottom: 8px;
+        }
+
+        .issues dd, .news dd {
+            border-bottom: 1px dashed #c8c8c8;
+            padding-bottom: 20px;
+            margin-bottom: 20px;
+        }
+
+        .issues dd.last, .news dd.last {
+            border-bottom: none;
+            padding-bottom: 0;
+        }
+
+        .issues dd p, .news dd p {
+            margin-bottom: 6px;
+        }
+
+        .issues dd a, .news dd a {
+            text-decoration: none;
+        }
+
+        .issues dd a:hover, .news dd a:hover {
+            text-decoration: none;
+        }
+
+        .calendar {
+            width: 100%;
+            text-align: center;
+            margin-bottom: 18px;
+        }
+
+        .calendar caption {
+            color: #000;
+            font-size: 13px;
+            text-align: left;
+            font-weight: bold;
+            padding-left: 10px;
+        }
+
+        .calendar td {
+            text-align: center;
+            font-size: 13px;
+            width: 40px;
+            padding: 3px 0 3px 0;
+        }
+
+        .calendar thead td {
+            padding: 6px 0 6px 0;
+        }
+
+        .calendar tbody td {
+            color: #000;
+            font-weight: bold;
+        }
+
+        .calendar tbody td a {
+            display: block;
+            background: url(images/date-link-bg.gif) no-repeat 0 0;
+            color: #fff;
+            text-decoration: none;
+        }
+
+        .calendar tbody td a, .calendar tbody td span {
+            width: 30px;
+            line-height: 27px;
+            display: block;
+        }
+
+        .calendar tbody td a:hover {
+            text-decoration: underline;
+        }
+
+        .diary-details {
+            height: 383px;
+            margin-top: 30px;
+        }
+
+        .diary-hd {
+            height: 66px;
+        }
+
+        .diary-hd h3 {
+            float: left;
+            font-size: 18px;
+            font-weight: normal;
+        }
+
+        .diary-hd a {
+            float: right;
+            font-size: 12px;
+            color: #EA0000;
+            margin-right: 30px;
+        }
+
+        .diary-bd li {
+            width: 228px;
+            height: 277px;
+            background-color: #ECECFF;
+            margin-right: 9px;
+            margin-left: 9px;
+            margin-bottom: 15px;
+            float: left;
+        }
+
+        .diary-bd li div img {
+            width: 228px;
+            height: 159px;
+        }
+
+        .diary-bd li h4 {
+            font-size: 12px;
+            color: #050505;
+            padding: 20px;
+            font-weight: normal;
+            line-height: 20px;
+        }
+
+        .diary-bd li p {
+            font-size: 12px;
+            color: #6C3365;
+            padding-left: 80px;
+            float: right;
+        }
+
+        .diary-bd li p span {
+            color: #2828FF;
+            float: right;
+        }
+
+        .diary-bd li a {
+            display: block;
+            width: 100%;
+            height: 100%;
+            text-decoration: none;
+        }
+
+        .diary-bd li:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 2px 9px rgba(0, 0, 0, .3);
+        }
+
+        .w {
+            width: 984px;
+            margin: 0 auto;
+        }
+
+        input, textarea, select, label {
+            font-family: inherit;
+            font-size: 12px;
+            box-sizing: border-box;
+        }
+
+        .login {
+            margin: 56px auto;
+            padding: 18px 20px;
+            width: 200px;
+            background: #6600CC;
+            border: 1px solid #172b4e;
+            border-bottom-color: #142647;
+            border-radius: 4px;
+            opacity: 0.9;
+        }
+
+        .login > h1 {
+            margin-bottom: 20px;
+            font-size: 16px;
+            font-weight: bold;
+            color: white;
+            text-align: center;
+            text-shadow: 0 -1px rgba(0, 0, 0, 0.4);
+        }
+
+        .login-input {
+            width: 100%;
+            height: 42px;
+            margin-bottom: 20px;
+            padding: 0 9px;
+            color: white;
+            text-shadow: 0 1px black;
+            background: #2b3e5d;
+            border: 1px solid #15243b;
+            border-top-color: #0d1827;
+            border-radius: 4px;
+        }
+
+        .login-input:focus {
+            outline: 0;
+            background-color: #32486d;
+        }
+
+        .login-submit {
+            width: 100%;
+            height: 42px;
+            margin-bottom: 15px;
+            font-size: 14px;
+            font-weight: bold;
+            color: #294779;
+            text-align: center;
+            text-shadow: 0 1px rgba(255, 255, 255, 0.3);
+            background: #adcbfa;
+            border: 1px solid #284473;
+            border-bottom-color: #223b66;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        .login-help {
+            text-align: center;
+        }
+
+        .login-help a {
+            text-decoration: none;;
+        }
+
+        #msg1 {
+            height: 18px;
+            color: rgb(190, 223, 7);
+            font-size: 8px;
+            margin-top: -16px;
+            margin-left: 6px;
+            }
+
+        #msg2 {
+            height: 18px;
+            color: rgb(190, 223, 7);
+            font-size: 8px;
+            margin-top: -16px;
+            margin-left: 6px;
+        }
+
+        #footer .container {
+            text-align: center;
+            font-size: 11px;
+            height: 31px;
+        }
+
+        #footer a {
+            color: #999;
+        }
+
+        #footer span {
+            color: #313131;
+        }
+
+        body,html {
+            height: 800px;
+        }
+
+        .up {
+            display: none; 
+            width: 100px; 
+            height: 100px; 
+            position: fixed; 
+            right: 10px; 
+            bottom: 20px;
+        }
+
+        #main-changepic {
+            width: 971px;
+            margin: auto;
+        }
+
+        #smallpic {
+            height: 120px; 
+        }
+
+        #smallpic img:hover {
+            cursor: pointer;
+        }
+        
+        #bigpic {
+            padding-bottom: 10px;
+        }
+
+        .pb {
+            border: 1px solid red;
+        }
+    </style>
+</head>
+
+<body id="page1">
+    <div id="main">
+        <div id="time" class="time"></div>
+    <div id="header">
+        <div class="row-1">
+            <div class="logo">
+                <h1>
+                    <a href="#" id="changecol2">我的博客</a>
+                </h1>
+            </div>
+	
+            <form action="" id="search-form">
+                <fieldset>
+                    <input type="text" class="text" placeholder="请输入搜索内容"/>
+                    <input type="submit" class="submit" value="" id="subm"/>
+                </fieldset>
+            </form>
+        </div>
+	
+        <div class="row-2">
+            <ul class="nav">
+                <li id="changecol"><a href="#">我的主页</a></li>
+                <li class="middle"><a href="#">程序人生</a></li>
+                <li class="middle"><a href="#">我的摄影</a></li>
+                <li class="middle"><a href="#">我的日记</a></li>
+                <li class="middle"><a href="#">励志馆</a></li>
+                <li class="middle"><a href="#">留言板</a></li>
+                <li class="last"><a href="#">关于我</a></li>
+            </ul>
+        </div>
+    </div>
+    
+    <div class="banner">
+        <div class="banner-big w">
+            <ul>
+                <li>
+                    <a href="#"><img src="images/banner6.jpg" alt=""></a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    
+    <div id="content">
+    <div class="indent">
+    <div class="wrapper">
+    <div class="col-1">
+        <h3>今日分享 &amp; 博主空间 </h3>
+        <ul class="news">
+            <li>
+                <span class="date"></span>
+                <h2>
+                    <a href="#">今日分享<br/>#谁的青春不迷茫#</a>
+                </h2>
+                <h4>谁的青春不迷茫，其实我们都一样，一样的青春，一样的迷茫，但依旧在路上……</h4>
+    
+                <p>
+                    1.现在每个我遇见的笑着的人，他们都不曾因为苦而放弃，他们只因扛而成长。谁不希望自己活得轻松，没有压力，一切随性，但如果你真的那样去做的话，你会发现这个世界都在和你作对。如果有一天你真的觉得自己轻松了，那也不是因为生活越来越容易了，而是因为我们越来越坚强。&nbsp;&nbsp;&nbsp;&nbsp;——刘同<a
+                        href="#">《谁的青春不迷茫》</a>
+                </p>
+    
+                <p>
+                    2.现在每个我遇见的笑着的人，他们都不曾因为苦而放弃，他们只因扛而成长。谁不希望自己活得轻松，没有压力，一切随性，但如果你真的那样去做的话，你会发现这个世界都在和你作对。如果有一天你真的觉得自己轻松了，那也不是因为生活越来越容易了，而是因为我们越来越坚强。&nbsp;&nbsp;&nbsp;&nbsp;——刘同<a
+                        href="#">《谁的青春不迷茫》</a>
+                </p>
+    
+                <p>
+                    3.当我们尽力把悲观的事情用乐观的态度去表达时，你会发现迷宫顺着走到出口能遇光明，倒着回到出发一样光亮。我们都一样，正处于期盼未来，挣脱过去，当下使劲的样子。会狼狈，有潇洒，但更多的是不怕。不怕动荡，不怕转机，不怕突然。谁的青春不迷茫，其实我们都一样。&nbsp;&nbsp;&nbsp;&nbsp;——刘同<a
+                        href="#">《谁的青春不迷茫》</a>
+                </p>
+                <a href="#" class="txt1"><strong>查看更多内容</strong></a>
+            </li>
+            <li class="last">
+                <span class="date"></span>
+                <h2>
+                    <a href="#">博主空间<br/>&nbsp;&nbsp;&nbsp;&nbsp;——&nbsp;一路花开</a>
+                </h2>
+                <div class="img-box">
+                    <img src="images/photo.jpg" alt=""/>
+                    <h4>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Hello! I'm Chen Liangyue, a student from
+                        software college of Hebei Normal University.
+                    </h4>
+    
+                    <p>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;欢迎来到我的博客！我是博主一路花开。
+                    </p>
+    
+                    <p>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;岁月不居，时节如流。回首向来萧瑟处，归去，也无风雨也无晴。在这里，我会与大家分享"我的日记""开心一刻""程序人生""励志馆""今日分享""日常随笔"等精彩内容，欢迎大家点击查看，希望大家多多关注，多多指点，多多交流。欢迎大家前往“留言板”留言，写下自己的心得、看法和建议。
+                    </p>
+    
+                    <p>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;所有文章未经授权禁止转载、摘编、复制或建立镜像，如有违反，追究责任。
+                    </p>
+                </div>
+                <a href="#" class="txt1"><strong>查看更多内容</strong></a>
+            </li>
+        </ul>
+    </div>
+    <div class="col-2">
+        <div class="section indent">
+            <h3 class="alt">
+                <em>最新内容&nbsp;&nbsp;&nbsp;&nbsp;</em>
+                <img src="images/news.jpg" alt=""/>
+            </h3>
+            <dl class="issues">
+                <dt>程序人生</dt>
+                <dd>
+                    <p>
+                        &nbsp;&nbsp;&nbsp;&nbsp;//C语言：
+                    </p>
+    
+                    <p>
+                        &nbsp;&nbsp;&nbsp;&nbsp;//根据输入行数打印倒三角：
+                    </p>
+    
+                    <p>
+                        &nbsp;&nbsp;&nbsp;&nbsp;//注意控制流程之循环流程和代码的规范性
+                    </p>
+    
+                    <p>
+                        &nbsp;&nbsp;&nbsp;&nbsp;//代码示例如下：
+                    </p>
+    
+                    <p>
+                        &nbsp;&nbsp;&nbsp;&nbsp;//C语言：
+                    </p>
+    
+                    <p>
+                        &nbsp;&nbsp;&nbsp;&nbsp;//根据输入行数打印倒三角：
+                    </p>
+    
+                    <p>
+                        &nbsp;&nbsp;&nbsp;&nbsp;//注意控制流程之循环流程和代码的规范性
+                    </p>
+    
+                    <p>
+                        &nbsp;&nbsp;&nbsp;&nbsp;//代码示例如下：
+                    </p>
+    
+                    <p><em><b>……</b></em></p>
+                    <br/>
+    
+                    <p><a href="#">更新于2020.8.13</a></p>
+                    <br/>
+    
+                    <div class="wrapper">
+                        <a href="#" class="link1"><b>点击查看更多</b></a>
+                    </div>
+                    <br/>
+                </dd>
+                <br/>
+                <dt>留言板</dt>
+                <dd class="last">
+                    <p>
+                        &nbsp;&nbsp;&nbsp;&nbsp;
+                        如果有来生，要做一棵树，站成永恒。
+                        没有悲欢的姿势，一半在尘土里安详，一半在风里飞扬；一半洒落荫凉，一半沐浴阳光。
+                        非常沉默、非常骄傲。从不依靠、从不寻找。
+                    <p><em><b>……</b></em></p>
+                    <br/>
+    
+                    <p><a href="#">更新于2020.12.11</a></p>
+                    <br/>
+    
+                    <div class="wrapper">
+                        <a href="#" class="link1"><b>点击查看更多</b></a>
+                    </div>
+                </dd>
+            </dl>
+        </div>
+    
+        <div class="box">
+            <div class="border-top">
+                <div class="border-right">
+                    <div class="border-bot">
+                        <div class="border-left">
+                            <div class="inner">
+                                <h3>更新日历</h3>
+                                <table class="calendar">
+                                    <caption>Dec</caption>
+                                    <thead>
+                                    <tr>
+                                        <td>Mn</td>
+                                        <td>Tu</td>
+                                        <td>We</td>
+                                        <td>Th</td>
+                                        <td>Fr</td>
+                                        <td>Sa</td>
+                                        <td>Su</td>
+                                    </tr>
+                                    </thead>
+                                    <tbody>
+                                    <tr>
+                                        <td></td>
+                                        <td></td>
+                                        <td><span>1</span></td>
+                                        <td><span>2</span></td>
+                                        <td><a href="#">3</a></td>
+                                        <td><span>4</span></td>
+                                        <td><a href="#">5</a></td>
+                                    </tr>
+                                    <tr>
+                                        <td><span>6</span></td>
+                                        <td><span>7</span></td>
+                                        <td><a href="#">8</a></td>
+                                        <td><span>9</span></td>
+                                        <td><span>10</span></td>
+                                        <td><a href="#">11</a></td>
+                                        <td><span>12</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td><span>13</span></td>
+                                        <td><span>14</span></td>
+                                        <td><span>15</span></td>
+                                        <td><span>16</span></td>
+                                        <td><span>17</span></td>
+                                        <td><a href="#">18</a></td>
+                                        <td><span>19</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td><a href="#">20</a></td>
+                                        <td><span>21</span></td>
+                                        <td><span>22</span></td>
+                                        <td><span>23</span></td>
+                                        <td><span>24</span></td>
+                                        <td><span>25</span></td>
+                                        <td><span>26</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td><span>27</span></td>
+                                        <td><span>28</span></td>
+                                        <td><span>29</span></td>
+                                        <td><span>30</span></td>
+                                        <td><span>31</span></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                    </tr>
+                                    </tbody>
+                                </table>
+                                <a href="#">December</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+    </div>
+    </div>
+    </div>
+    
+    <div class="diary-details w">
+        <div class="diary-hd clearfix">
+            <h3>
+                &nbsp;&nbsp;&nbsp;日常随笔<a href="#"><strong>点击查看更多</strong></a>
+            </h3>
+        </div>
+        <div class="diary-bd clearfix">
+            <ul>
+                <li><a href="#">
+                    <div>
+                        <img src="images/one.jpg" alt="">
+                    </div>
+                    <div>
+                        <h4>
+                            朝起幕落，万事沉浮。
+                            <br/>
+                            脆弱的是躯体，伟大的是灵魂。
+                        </h4>
+    
+                        <p>
+                            <span>12.11&nbsp;&nbsp;&nbsp;&nbsp;</span>
+                            2020.
+                        </p>
+                    </div>
+                </a></li>
+                <li><a href="#">
+                    <div>
+                        <img src="images/two.jpg" alt="">
+                    </div>
+                    <div>
+                        <h4>心若没有栖息的地方，到哪都是流浪。</h4>
+    
+                        <p>
+                            <span>12.10&nbsp;&nbsp;&nbsp;&nbsp;</span>
+                            2020.
+                        </p>
+                    </div>
+                </a></li>
+                <li><a href="#">
+                    <div>
+                        <img src="images/three.jpg" alt="">
+                    </div>
+                    <div>
+                        <h4>不是你今天感觉不好，就可以随便输掉的。</h4>
+    
+                        <p>
+                            <span>12.09&nbsp;&nbsp;&nbsp;&nbsp;</span>
+                            2020.
+                        </p>
+                    </div>
+                </a></li>
+                <li><a href="#">
+                    <div>
+                        <img src="images/four.jpg" alt="">
+                    </div>
+                    <div>
+                        <h4>
+                            The Chosen One
+                            <br/>
+                            天选之子
+                        </h4>
+    
+                        <p>
+                            <span>12.08&nbsp;&nbsp;&nbsp;&nbsp;</span>
+                            2020.
+                        </p>
+                    </div>
+                </a></li>
+            </ul>
+        </div>
+    </div>
+    
+    <div id="main-changepic">
+        <div id="smallpic">
+            <img src="images/1.jpg"  width="188" height="112" />
+            <img src="images/2.jpg"  width="187" height="112"/>
+            <img src="images/3.jpg"  width="187" height="112"/>
+            <img src="images/4.jpg"  width="187" height="112"/>
+            <img src="images/5.jpg"  width="187" height="112"/>
+        </div>
+        <div>
+            <img src="images/0.jpg" id="bigpic"/>
+        </div>
+    </div>
+
+    <div class="banner">
+        <div class="banner-big w">
+            &nbsp;
+        </div>
+        <form class="login" onsubmit="return false">
+            <h1>快速登录查看更多内容</h1>
+            <input type="email" placeholder="账号" class="login-input" id="Name">
+            <div id="msg1"></div>
+            <input type="password" placeholder="密码" class="login-input" id="Password">
+            <div id="msg2"></div>
+            <input type="submit" value="登录" class="login-submit">
+            <p class="login-help">
+                <a href="#">没有账号？点击注册</a>
+            </p>
+        </form>
+    </div>
+
+    <div id="footer">
+        <div class="container">
+            <span>皖ICP备&nbsp;2019012326&nbsp; &copy; &nbsp;2020. &nbsp; &nbsp;</span><a href="#" id="private">隐私政策</a>
+            <p>
+                <span>创作者：一路花开</span>
+            </p>
+        </div>
+    </div>
+
+    <div id="top" class="up" onclick="goTop()" ><img src="images/backtop.jpg" alt=""/></div>
+</body>
+<script>
+    //js效果1：对话框效果
+    var subm = document.getElementById("subm");
+    var private = document.getElementById("private");
+    
+    subm.onclick = function() {
+        var result = confirm("是否确认搜索？");
+        if(result) {
+            console.log("搜索成功!");
+        } else {
+            console.log("用户取消了操作");
+        }
+    }
+    private.onclick = function() {
+        alert("即将查看隐私政策");
+    }
+
+    //js效果2：变色效果
+    var timerId = setInterval(function() {
+        var arr = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 'a', 'b', 'c', 'd', 'e', 'f'];
+        var colorStr = "#";
+        for(var i = 0; i < 6; i++) {
+            var index = parseInt(Math.random()*arr.length);
+            colorStr = colorStr + arr[index];
+        }
+        var changecol = document.getElementById("changecol");
+        changecol.style.background = colorStr;
+        var changecol2 = document.getElementById("changecol2");
+        changecol2.style.background = colorStr;
+    }, 1200)
+
+    //js效果3：点击图片回到顶部效果
+    function goTop(){
+		var odiv = document.getElementById("top");
+		//将滚动距离设置为0(兼容性写法)
+		document.documentElement.scrollTop = document.body.scrollTop = 0;
+	}
+
+	window.onscroll = function(){
+		var odiv = document.getElementById("top");			
+		//获取垂直滚动条的滚动距离(兼容性写法)
+		var scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
+		if(scrollTop > 1900){	
+			odiv.style.display = "block";
+		} else {
+			odiv.style.display = "none"
+		}
+    }
+    
+    //js效果4：登录框获取和失去焦点时的效果
+    var Name = document.getElementById("Name");
+    var Password = document.getElementById("Password");
+    var btn = document.getElementById("btn");
+    var msg1 = document.getElementById("msg1");
+    
+    Name.onfocus = function () {
+        msg1.innerHTML = "请输入用户名";
+    }
+    Name.onblur = function () {
+        if (Name.value == "") {
+            msg1.innerHTML = "用户名不能为空";
+        } else {
+            msg1.innerHTML = "";
+        }
+    }
+
+    Password.onfocus = function () {
+        msg2.innerHTML = "请输入密码";
+    }
+    Password.onblur = function () {
+        if (Password.value == "") {
+            msg2.innerHTML = "密码不能为空";
+        } else {
+            msg2.innerHTML = "";
+        }
+    }
+
+    //js效果5：动态显示时分秒的效果
+    window.setInterval('showTime()', 1000);
+    function showTime() {
+        var enabled = 0;
+        today = new Date();
+        var day;
+        var date;
+        if (today.getDay() == 0) day = "星期日";
+        if (today.getDay() == 1) day = "星期一";
+        if (today.getDay() == 2) day = "星期二";
+        if (today.getDay() == 3) day = "星期三";
+        if (today.getDay() == 4) day = "星期四";
+        if (today.getDay() == 5) day = "星期五";
+        if (today.getDay() == 6) day = "星期六";
+        date = (today.getFullYear()) + "年" + (today.getMonth() + 1 ) + "月" + today.getDate() + "日 " +
+                day + "&nbsp;" + today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds();
+        document.getElementById("time").innerHTML = date;
+    }
+
+    //js效果6：图片切换效果
+    //1.获取要操作的DOM节点对象
+    var smallpic = document.getElementById("smallpic");
+    var imgList = smallpic.getElementsByTagName("img");
+    var bigpic = document.getElementById("bigpic");
+    //2.遍历
+    for(var i = 0; i < imgList.length; i++) {
+        imgList[i].onclick = function() {
+            for(var i = 0; i < imgList.length; i++) {
+                if(imgList[i].hasAttribute("class")) {
+                    imgList[i].removeAttribute("class");
+                }
+            }
+            this.setAttribute("class", "pb");
+            var imgSrc = this.getAttribute("src");
+            bigpic.setAttribute("src", imgSrc);
+
+            this.setAttribute("index", 1);
+        }
+    }
+</script>
+</html>
